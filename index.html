@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Demo</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <div id="app2">
+            <a id="brand" href="#">OVERVUE</a>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Produts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div id="app">
+        <h1>{{Title}}</h2>
+        <section>
+            <h3>Products</h3><br>
+            <products v-bind:products="productList" 
+            v-on:del-product="deleteProduct"/>
+        </section>
+
+        <section>
+            <h3>Add products</h3><br>
+            <add-product @add-product="addNewProduct" />
+        </section>
+        
+
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
